@@ -10,21 +10,19 @@ export class Player {
 
 
   newDay(){
-    if(this.experience > 100){
-      this.resetExperience();
-    }
-    this.updateExperience();
-
-    if(this.experience < 0){
-      this.resetExperience();
-    }
     if(this.level < 0){
       this.level = 0
     }
 
+    if(this.experience < 0){
+      this.resetExperience();
+    }
+    
+    this.updateExperience();
+
     if(this.experience >= 100 && this.level < 10){
       this.updateLevel();
-      this.resetExperience();
+      this.experience -= 100;
     }
   }
 
