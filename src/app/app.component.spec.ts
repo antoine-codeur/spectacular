@@ -14,7 +14,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Spec-tacular!' title`, () => { });
+  it(`should have the 'Spec-tacular!' title`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const title = app.title;
+    expect(title).toEqual('Spec-tacular!');
+  });
 
-  it('should render title', () => { });
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Spec-tacular!');
+  });
 });
