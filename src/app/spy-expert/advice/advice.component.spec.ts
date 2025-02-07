@@ -1,15 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Advice } from '../core/models/advice'
+import { Advice } from '../core/models/advice';
 import { AdviceComponent } from './advice.component';
 import { DebugElement } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { By } from '@angular/platform-browser';
 
 describe('AdviceComponent', () => {
 
   let component: AdviceComponent;
   let fixture: ComponentFixture<AdviceComponent>;
   let debugEl: DebugElement;
-  let expectedAdvice: Advice = { slip: { id: 2, advice: 'fake advice'}}
+  let expectedAdvice: Advice = { slip: { id: 2, advice: 'fake advice'}};
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
