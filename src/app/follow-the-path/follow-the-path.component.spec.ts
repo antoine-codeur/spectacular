@@ -24,7 +24,13 @@ describe('FollowThePathComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should display 5 <a> tag', () => { });
+  it('should display 5 <a> tag', () => {
+    const aTags = debugEl.nativeElement.querySelectorAll('a');
+    expect(aTags.length).toBe(5);
+  });
 
-  it('should have proper link to home page', () => { });
+  it('should have proper link to home page', () => {
+    const aTags = debugEl.nativeElement.querySelectorAll('a');
+    expect(aTags[0].href).toContain('/home');
+  });
 })
