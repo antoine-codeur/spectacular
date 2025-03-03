@@ -22,7 +22,9 @@ describe('SpyExpertComponent', () => {
   afterEach(() => {
     httpTesting.verify();
   });
-  it('should return expected advice (httpclient called once)', () => { });
-
-  it('should properly handle request error', () => { });
+  it('should return expected advice (httpclient called once)', () => {
+  });
+  
+  it('should properly handle request error', () => {
+  });
 });
