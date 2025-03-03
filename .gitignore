@@ -3,4 +3,3 @@ node_modules
 dist
 build
 .angular
-package-lock.json
